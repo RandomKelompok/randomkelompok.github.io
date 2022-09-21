@@ -79,7 +79,7 @@ textarea {
 
 .kelompok {
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 210px;
     margin: 7px;
 }
@@ -88,6 +88,9 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .app-footer{
