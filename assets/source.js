@@ -5,37 +5,37 @@ function kelompokResult() {
     names = document.getElementById("name").value
     names = names.split(/\n/)
     names = shuffle(names)
-    
+
     kel = document.getElementById("kelompok").value
-    if (names.length < kel){
+    if (names.length < kel) {
         alert("Kelompok Terlalu Banyak!!")
-    }else if(kel == 0){
+    } else if (kel == 0) {
         alert("Kelompok tidak boleh 0!!")
-    }else if(kel < 0){
+    } else if (kel < 0) {
         alert("Kelompok tidak boleh negatif!!")
-    }else{
-        anggota = Math.floor(names.length/kel)
+    } else {
+        anggota = Math.floor(names.length / kel)
         a = 1
         buat = true
         while (names.length > 0) {
-            if (a-1 == kel){
+            if (a - 1 == kel) {
                 a = 1
                 buat = false
                 i = 1
             }
-            if (buat){
+            if (buat) {
                 addKelompok(a)
                 i = anggota
             }
-            if (i == 0){
+            if (i == 0) {
                 i = 1
             }
-            while (i > 0){
+            while (i > 0) {
                 nama = get_random(names)
                 addAnggota(nama, a)
-                i-=1
+                i -= 1
             }
-            a+=1
+            a += 1
         }
     }
 }
@@ -74,14 +74,11 @@ function get_random(list) {
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
-    // While there remain elements to shuffle.
     while (currentIndex != 0) {
 
-        // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        // And swap it with the current element.
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
