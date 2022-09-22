@@ -43,6 +43,10 @@ header {
     opacity: .5;
 }
 
+.nav-icon {
+    display: none !important;
+}
+
 .nav-text {
     font-weight: bolder;
     color: black;
@@ -116,4 +120,14 @@ footer p {
     color: white;
     font-weight: bolder;
     font-size: 24px;
+}
+
+@media screen and (max-width: 487px) {
+    .nav-icon {
+        display: block !important;
+    }
+    
+    .nav-text {
+        display: none;
+    }
 }
